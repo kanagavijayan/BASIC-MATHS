@@ -1,0 +1,434 @@
+/* =========================================
+   🌟 MODERN MATHS WEBSITE
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+
+    /* Dark overlay over your background image */
+    background-color: #111;
+}
+
+/* =========================================
+   🔢 TOP HEADER
+   ========================================= */
+
+#kk1 {
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+
+    margin: 15px auto;
+    width: 95%;
+
+    padding: 18px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    color: white;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s;
+}
+
+#kk1:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   🧭 NAVIGATION
+   ========================================= */
+
+.button-container {
+    position: sticky;
+    top: 85px;
+    z-index: 999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    width: 95%;
+
+    margin: 20px auto;
+    padding: 15px;
+
+    border-radius: 18px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Navigation buttons */
+
+.button-container button {
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    transform: translateY(-5px) scale(1.05);
+
+    background: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5);
+
+    color: #fff;
+}
+
+.button-container button:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   📚 MAIN MATHEMATICS INTRO
+   ========================================= */
+
+.matths {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background: rgba(0, 0, 0, 0.60);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    text-align: center;
+
+    animation: appear 1s ease;
+}
+
+/* =========================================
+   ✨ HEADINGS
+   ========================================= */
+
+h1 {
+    text-align: center;
+
+    font-family: "Trebuchet MS", sans-serif;
+
+    font-size: clamp(32px, 5vw, 55px);
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 25px rgba(0, 200, 255, 0.5);
+}
+
+.matths h1:first-child {
+    font-size: 22px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    opacity: 0.8;
+}
+
+.matths h1:nth-child(2) {
+    font-size: clamp(40px, 7vw, 75px);
+}
+
+/* =========================================
+   📝 PARAGRAPHS
+   ========================================= */
+
+p {
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-top: 15px;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================
+   📖 CONTENT CARDS
+   ========================================= */
+
+.ss1,
+.ss2,
+.ss3,
+.ss4 {
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(0, 0, 0, 0.60);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+
+    transition: all 0.4s ease;
+
+    animation: cardAppear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
+}
+
+/* Card hover */
+
+.ss1:hover,
+.ss2:hover,
+.ss3:hover,
+.ss4:hover {
+
+    transform: translateY(-8px);
+
+    background: rgba(0, 0, 0, 0.75);
+
+    border-color: rgba(255, 255, 255, 0.6);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================
+   🔹 CARD HEADINGS
+   ========================================= */
+
+.ss1 h1,
+.ss2 h1,
+.ss3 h1,
+.ss4 h1 {
+
+    font-size: clamp(25px, 4vw, 40px);
+
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   📋 LIST
+   ========================================= */
+
+ul {
+    padding-left: 30px;
+
+    font-size: 19px;
+
+    line-height: 2;
+}
+
+li {
+    margin-bottom: 8px;
+
+    transition: 0.25s;
+}
+
+li:hover {
+    transform: translateX(8px);
+
+    color: #fff;
+}
+
+/* =========================================
+   🎯 DIFFERENT CARD COLORS
+   ========================================= */
+
+.ss1 {
+    border-left: 6px solid #00eaff;
+}
+
+.ss2 {
+    border-left: 6px solid #a855f7;
+}
+
+.ss3 {
+    border-left: 6px solid #22c55e;
+}
+
+.ss4 {
+    border-left: 6px solid #f59e0b;
+}
+
+/* =========================================
+   🌟 ANIMATIONS
+   ========================================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   🔢 DECORATIVE MATH EFFECT
+   ========================================= */
+
+body::before {
+    content: "∑   π   √x   ∞   ∫   x²   Δ   θ   ≠   ≤   ≥";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+
+    letter-spacing: 25px;
+
+    color: rgba(255, 255, 255, 0.04);
+
+    z-index: -1;
+}
+
+/* =========================================
+   📱 MOBILE DESIGN
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    #kk1 {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .button-container {
+        top: 70px;
+
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    .button-container button {
+        padding: 9px 14px;
+
+        font-size: 14px;
+    }
+
+    .matths,
+    .ss1,
+    .ss2,
+    .ss3,
+    .ss4 {
+        width: 94%;
+
+        padding: 22px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    ul {
+        font-size: 17px;
+
+        line-height: 1.7;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
